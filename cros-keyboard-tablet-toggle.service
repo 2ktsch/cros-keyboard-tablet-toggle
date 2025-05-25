@@ -6,7 +6,7 @@ After=multi-user.target
 Type=simple
 ExecStart=/usr/bin/python3 /usr/bin/cros-keyboard-tablet-toggle.py
 User=root
-Restart=unless-stopped
+Restart=always
  
 [Install]
 WantedBy=multi-user.target
