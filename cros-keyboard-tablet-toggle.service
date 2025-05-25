@@ -1,0 +1,12 @@
+[Unit]
+Description=Automatic Keyboard toggle for machines where the keyboard doesn't turn off in tablet mode, such as some chromebooks
+After=multi-user.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/bin/cros-keyboard-tablet-toggle.py
+User=root
+Restart=unless-stopped
+ 
+[Install]
+WantedBy=multi-user.target

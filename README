@@ -1,0 +1,9 @@
+Some convertible chromebooks (and maybe other laptops) don't turn the keyboard off when flipped to "Tablet Mode".
+
+This is a fix using keyd that disables regular keymaps if they exist and enables a special one that has all keys mapped to 'noop'.
+
+install cros-keyboard-tablet-toggle.py to /usr/bin (or wherever you want and update the .service file)
+install "off.nope" to /etc/keyd
+install the .service file and enable the service
+
+dependencies: keyd, python3, systemd, libinput
